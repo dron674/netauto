@@ -1,0 +1,25 @@
+servers=[
+  # main
+  {
+    :hostname => "mainhost." + DOMAIN,
+    # не используется в нашем случае :ip => BRIDGE_NET + "150",
+    :ip_int => INTERNAL_NET + "2",
+    :ram => 512,
+    :os => "ubuntu/bionic64"
+  },
+
+  #mesos master
+  {
+    :hostname => "mesosm1." + DOMAIN,
+    # не используется в нашем случае :ip => BRIDGE_NET + "150",
+    :ip_int => INTERNAL_NET + "21",
+    :ram => 1724,
+    :os => "generic/rhel7"
+  },
+ {
+   :hostname => "mesosm2." + DOMAIN,
+   # не используется в нашем случае :ip => BRIDGE_NET + "150",
+   :ip_int => INTERNAL_NET + "22",
+   :ram => 1724,
+   :os => "generic/rhel7"
+ },
